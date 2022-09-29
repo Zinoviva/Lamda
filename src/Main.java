@@ -1,6 +1,9 @@
+import jdk.jshell.spi.SPIResolutionException;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +22,11 @@ public class Main {
         };
 
         Collections.sort(people, myInterface);
+        //создать предикат с фильтром на возраст 18 лет, если да удалить его из списка
+        people.removeIf(person -> person.getAge() < 18 );
+
+
+
         System.out.println(people);//после сортировки покажет нам список в нужном порядке
     }
 }

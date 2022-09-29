@@ -1,8 +1,9 @@
+import java.util.function.Predicate;
+
 public class Person implements Comparable<Person> {
     private String name;
     private String surname;
     private int age;
-
 
     public Person(String name, String surname, int age) {   // создайте конструктор на все поля
         this.name = name;                                  //заполняем поля напрямую из параметра конструктора
