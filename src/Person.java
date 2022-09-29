@@ -3,6 +3,7 @@ public class Person implements Comparable<Person> {
     private String surname;
     private int age;
 
+
     public Person(String name, String surname, int age) {   // создайте конструктор на все поля
         this.name = name;                                  //заполняем поля напрямую из параметра конструктора
         this.surname = surname;
@@ -15,6 +16,10 @@ public class Person implements Comparable<Person> {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     @Override
